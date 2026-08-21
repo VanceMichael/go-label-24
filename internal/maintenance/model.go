@@ -74,6 +74,14 @@ type ServiceReport struct {
 	CompletedAt time.Time
 }
 
+type CompletionRequest struct {
+	OrderIndex           int
+	AssetIndex           int
+	Report               ServiceReport
+	ExpectedOrderVersion int64
+	ExpectedAssetVersion int64
+}
+
 type Downtime struct {
 	AssetID  string
 	StartsAt time.Time
